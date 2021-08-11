@@ -37,10 +37,19 @@ class App extends Component {
     ]
   }
 
+ cities(i){
+    if(this.cityList.country == 'India'){
+      <li key={"location"+i+1}>{this.cityList.name}</li>
+    }
+  }
+
   render() {
     return (
       <div id="main">
         {/* Do not remove the main div */}
+      <ol>
+        {this.cities}
+      </ol>
       </div>
     )
   }
