@@ -45,7 +45,7 @@ class App extends Component {
           {this.cityList
             .filter((cName) => cName.country === "India")
             .map((e, index) => (
-              <li style = {{key={`location${index + 1}`}}}> {e.name} </li>
+              <li key="location"+(index + 1)> {e.name} </li>
             ))}
         </ol>
       </div>
