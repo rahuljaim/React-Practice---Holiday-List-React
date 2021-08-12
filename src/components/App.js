@@ -41,11 +41,11 @@ class App extends Component {
     return (
       <div id="main">
         {/* Do not remove the main div */}
-     <ol key="oListKey">
+    <ol key="oListKey">
           {this.cityList
             .filter((cName) => cName.country === "India")
             .map((e, index) => (
-              <li key="location"+(index + 1)> {e.name} </li>
+              <li key={`location${index + 1}`}> {e.name} </li>
             ))}
         </ol>
       </div>
